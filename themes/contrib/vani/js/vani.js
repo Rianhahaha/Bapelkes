@@ -44,9 +44,17 @@ jQuery(document).ready(function ($) {
 
 const navbar = document.querySelector('.header-onscroll');
 window.onscroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 70) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
+    }
+};
+const navbar1 = document.querySelector('.header-main');
+window.onscroll = () => {
+    if (window.scrollY > 70) {
+        navbar1.classList.add('scrolled');
+    } else {
+        navbar1.classList.remove('scrolled');
     }
 };
