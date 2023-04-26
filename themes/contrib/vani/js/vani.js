@@ -42,15 +42,15 @@ jQuery(document).ready(function ($) {
 --------------------------*/
 });
 
-const navbar = document.querySelector('.header-onscroll');
-window.onscroll = () => {
-    if (window.scrollY > 70) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-};
-const navbar1 = document.querySelector('.header-main');
+// const navbar = document.querySelector('.header-onscroll');
+// window.onscroll = () => {
+//     if (window.scrollY > 70) {
+//         navbar.classList.add('scrolled');
+//     } else {
+//         navbar.classList.remove('scrolled');
+//     }
+// };
+const navbar1 = document.querySelector('.header, .header-main');
 window.onscroll = () => {
     if (window.scrollY > 70) {
         navbar1.classList.add('scrolled');
@@ -58,3 +58,12 @@ window.onscroll = () => {
         navbar1.classList.remove('scrolled');
     }
 };
+// const a = document.querySelector('menulink');
+// window.onscroll = () => {
+//     if (window.scrollY > 70) {
+//         a.classList.add('scrolled');
+//     } else {
+//         a.classList.remove('scrolled');
+//     }
+// };
+
