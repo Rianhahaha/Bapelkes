@@ -2707,7 +2707,7 @@ button.button-link {
 .button-link:hover,
 a.button-link:hover,
 button.button-link:hover {
-  color: var(--r-bold-color);
+  color: var(--color-primary);
   background: transparent;
 }
 
@@ -2785,6 +2785,12 @@ button.button-link:hover {
 .feature:hover {
   background: var(--theme-color);
   color: #ffffff;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.feature:hover a {
+  color: #ffffff;
+  text-decoration: underline;
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
@@ -3406,4 +3412,111 @@ border-color: white;
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+}
+
+#block-views-block-slider-block-1-2 .container {
+
+  max-width: 85rem;
+  max-height: 25rem;
+}
+
+#block-views-block-slider-block-1-2 .slick-track {
+height: 26rem;
+
+}
+#block-views-block-slider-block-1-2 .slick-dots {
+  bottom:-43px;
+}
+
+.node-view-mode-teaser {
+  transition: transform 0.5s ;
+}
+.node-view-mode-teaser:hover {
+  transform: translateY(-1rem);
+}
+
+.node-content .node-links-container {
+position: absolute;
+bottom: 2px;
+max-width: 90%;
+}
+.link-terkait {
+
+}
+
+/* read more */
+.views-field-view-node {
+  position: relative;
+  margin-top: 1rem;
+}
+.views-field-view-node .field-content a {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  padding: 13px;
+  color: var(--color-primary);
+  background: white;
+  border-radius: 29px;
+  transition: color 0.4s;
+}
+.views-field-view-node .field-content a:hover {
+  background:var(--color-primary);
+  color:white
+
+}
+.slick button {
+position: inherit;
+background-color: transparent;
+}
+.slick button:hover {
+  background-color: transparent;
+  }
+  .field-content {
+    text-align: justify;
+  }
+  
+/* read more end */
+/* CUSTOM PER ITEM */
+.views-view-responsive-grid__item {
+  background-color: white;
+  box-shadow: 0px 5px 24px rgba(0,0,0,0.1);
+  border: solid 2px #e2e4ef;
+  border-radius: 25px;
+  padding: 40px;
+  transition: transform 0.5s ;
+}
+.views-view-responsive-grid__item:hover {
+  transform: translateY(-1rem);
+}
+
+.views-field-title a {
+  position: relative;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+.views-field-title{
+  font-size: 27px;
+    font-weight: 1000;
+    font-family: var(--font-heading);
+}
+.views-field-title a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--theme-color);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.views-field-title a:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
