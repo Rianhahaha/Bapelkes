@@ -51,19 +51,42 @@ jQuery(document).ready(function ($) {
 //     }
 // };
 const navbar1 = document.querySelector('.header, .header-main');
+const menu = document.querySelector('.main-menu, a');
 window.onscroll = () => {
     if (window.scrollY > 70) {
         navbar1.classList.add('scrolled');
+        menu.classList.add('scrolled-menu')
     } else {
         navbar1.classList.remove('scrolled');
+        menu.classList.remove('scrolled-menu')
     }
 };
-// const a = document.querySelector('menulink');
-// window.onscroll = () => {
-//     if (window.scrollY > 70) {
-//         a.classList.add('scrolled');
-//     } else {
-//         a.classList.remove('scrolled');
-//     }
-// };
+const a = document.querySelector('menulink');
+window.onscroll = () => {
+    if (window.scrollY > 800) {
+      const counters = document.querySelectorAll(".count");
+      const speed = 300;
+      
+      counters.forEach((counter) => {
+        const updateCount = () => {
+          const target = parseInt(+counter.getAttribute("data-target"));
+          const count = parseInt(+counter.innerText);
+          const increment = Math.floor(target / speed);
+          console.log(increment);
+      
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 5);
+          } else {
+            count.innerText = target;
+          }
+        };
+        
+        updateCount();
+      });
+    } 
+};
+
+
+
 
